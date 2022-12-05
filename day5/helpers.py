@@ -6,12 +6,7 @@ def get_stacks(n_stacks=9):
 
     for stack in reversed(stacks_txt):
         stack = stack.replace('[', '').replace(']', '')
-        stack = stack.replace(5 * '    ', 5 * ',')
-        stack = stack.replace(4 * '    ', 4 * ',')
-        stack = stack.replace(3 * '    ', 3 * ',')
-        stack = stack.replace(2 * '    ', 2 * ',')
-        stack = stack.replace(1 * '    ', 1 * ',')
-        stack = stack.replace(' ', ',')
+        stack = stack.replace('    ', ',').replace(' ', ',')
         stack = stack.split(',')
 
         for i, letter in enumerate(stack, start=1):
