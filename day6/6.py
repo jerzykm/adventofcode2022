@@ -3,7 +3,7 @@ def get_marker_pos(code, n_characters):
     for i, letter in enumerate(list(code), start=1):
         q.append(letter)
 
-        if len(q) > 3 and len(q[-n_characters:]) == len(set(q[-n_characters:])):
+        if len(q) > n_characters - 1 and len(q[-n_characters:]) == len(set(q[-n_characters:])):
             return i
 
     return None
